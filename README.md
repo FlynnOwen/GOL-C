@@ -5,6 +5,11 @@ Mainly for teaching myself C.
 
 Planning to turn this into an installable Linux application.
 
+## To install:
+```console
+$ make
+```
+
 ## To run:
 
 ```console
