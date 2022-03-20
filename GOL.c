@@ -2,14 +2,16 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int nRows = 50;
-int nCols = 50;
-char board[50][50];
-char blankBoard[50][50];
 _Bool isBlank;
 int i, j;
 int counter;
+int nRows = 40;
+int nCols = 40;
+char board[40][40];
+char blankBoard[40][40];
 int evolutions = 100;
+int timeBetweenEvolutions = 0;
+int randomSeed = 50;
 
 void initBoard(isBlank){
     
@@ -22,6 +24,7 @@ void initBoard(isBlank){
     }
 
     else {
+        srand(randomSeed);
         int x;
         for (i = 0; i < nRows; i++){
             for (j = 0; j < nCols; j++){
@@ -143,14 +146,36 @@ void printBoardState(evolution) {
     printf("Generation = %i\n", evolution);
 }
 
-int main() {
-    int timeBetweenEvolutions = 1;
+int main(int argc, char *argv[]) {
     int e;
+    int opt;
+
+    while((opt = getopt(argc, argv, ":e:t:s:x")) != -1) 
+    { 
+        switch(opt) 
+        { 
+            case 't': 
+                timeBetweenEvolutions = atoi(optarg);
+                break; 
+            case 'e': 
+                evolutions = atoi(optarg);
+                break; 
+            case 's': 
+                randomSeed = atoi(optarg);
+                break; 
+            case ':': 
+                printf("option needs a value\n"); 
+                break; 
+            case '?': 
+                printf("unknown option: %c\n", optopt);
+                break; 
+        } 
+    } 
 
     initBoard(0);
 
     for (e=0; e < evolutions; e++) {
-        //sleep(timeBetweenEvolutions);
+        sleep(timeBetweenEvolutions);
         initBoard(1);
         evolveBoard();
         updateOldBoard();
