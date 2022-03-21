@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-_Bool isBlank;
+char boardInitState = 'r';
 int i, j;
 int counter;
 int nRows = 40;
@@ -13,17 +13,17 @@ int evolutions = 100;
 int timeBetweenEvolutions = 0;
 int randomSeed = 50;
 
-void initBoard(isBlank){
-    
-    if (isBlank) {
+void initBoard(boardInitState){
+    // blank board
+    if (boardInitState == 'b') {
         for (i = 0; i < nRows; i++){
             for (j = 0; j < nCols; j++){
             blankBoard[i][j] = ' ';
             }
         }
     }
-
-    else {
+    // board with random cells initiated
+    else if (boardInitState == 'r') {
         srand(randomSeed);
         int x;
         for (i = 0; i < nRows; i++){
@@ -37,6 +37,51 @@ void initBoard(isBlank){
                 }
             }
         }
+    }
+    // board with just glider gun initiated
+    else if (boardInitState == 'g') {
+        for (i = 0; i < nRows; i++){
+            for (j = 0; j < nCols; j++){
+            board[i][j] = ' ';
+            }
+        }
+        
+        board[1][25] = 'O';
+        board[2][23] = 'O';
+        board[2][25] = 'O';
+        board[3][13] = 'O';
+        board[3][14] = 'O';
+        board[3][21] = 'O';
+        board[3][22] = 'O';
+        board[3][35] = 'O';
+        board[3][36] = 'O';
+        board[4][12] = 'O';
+        board[4][16] = 'O';
+        board[4][21] = 'O';
+        board[4][22] = 'O';
+        board[4][35] = 'O';
+        board[4][36] = 'O';
+        board[5][1] = 'O';
+        board[5][2] = 'O';
+        board[5][11] = 'O';
+        board[5][17] = 'O';
+        board[5][21] = 'O';
+        board[5][22] = 'O';
+        board[6][1] = 'O';
+        board[6][2] = 'O';
+        board[6][11] = 'O';
+        board[6][15] = 'O';
+        board[6][17] = 'O';
+        board[6][18] = 'O';
+        board[6][23] = 'O';
+        board[6][25] = 'O';
+        board[7][11] = 'O';
+        board[7][17] = 'O';
+        board[7][25] = 'O';
+        board[8][12] = 'O';
+        board[8][16] = 'O';
+        board[9][13] = 'O';
+        board[9][14] = 'O';
     }
 
 }
@@ -150,10 +195,12 @@ int main(int argc, char *argv[]) {
     int e;
     int opt;
 
-    while((opt = getopt(argc, argv, ":e:t:s:x")) != -1) 
+    while((opt = getopt(argc, argv, ":ge:t:s:x")) != -1) 
     { 
         switch(opt) 
-        { 
+        {   case 'g': 
+                boardInitState = 'g';
+                break; 
             case 't': 
                 timeBetweenEvolutions = atoi(optarg);
                 break; 
@@ -172,11 +219,11 @@ int main(int argc, char *argv[]) {
         } 
     } 
 
-    initBoard(0);
-
+    initBoard(boardInitState);
+    
     for (e=0; e < evolutions; e++) {
         sleep(timeBetweenEvolutions);
-        initBoard(1);
+        initBoard('b');
         evolveBoard();
         updateOldBoard();
         printBoardState(e);
