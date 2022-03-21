@@ -8,7 +8,7 @@ $ make
 $ make install
 ```
 
-<img align="left" width="420" height="420" src="images/GOLc.gif"/>
+<img align="left" width="410" height="410" src="images/GOLc.gif"/>
 
 ## To run:
 
