@@ -1,4 +1,4 @@
-<h1 align="center"> GOL-C </h1>
+<h1 align="center"> GOL ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) </h1>
 <p align="center"> Conway's Game of Life terminal application. </p>
 
 <img align="left" width="450" height="510" src="images/GOLc.gif"/>
