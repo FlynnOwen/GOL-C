@@ -1,6 +1,8 @@
 # GOL-C
 Conway's Game of Life terminal application.
 
+<img align="left" width="450" height="450" src="images/GOLc.gif"/>
+
 ## To install:
 ```console
 $ make
