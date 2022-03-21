@@ -1,5 +1,5 @@
 # GOL-C
-<p align="left"> Conway's Game of Life terminal application.</p>
+<p align="center"> Conway's Game of Life terminal application.</p>
 
 <img align="left" width="450" height="450" src="images/GOLc.gif"/>
 
