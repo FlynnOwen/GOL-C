@@ -2,8 +2,10 @@
 
 <img align="left" width="450" height="520" src="images/GOLc.gif"/>
 
-## To install:
+## Manual install:
 ```console
+$ git clone https://github.com/FlynnOwen/GOL-C.git
+$ cd GOL-C
 $ make
 $ make install
 ```
