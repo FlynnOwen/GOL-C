@@ -11,7 +11,7 @@ $ make install
 ## To run:
 
 ```console
-$ ./GOL.c {optional arguements}
+$ GOL {optional arguements}
 ```
 
 ## Possible Optional Arguements
