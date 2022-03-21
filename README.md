@@ -10,13 +10,13 @@ $ make install
 
 <img align="left" width="410" height="410" src="images/GOLc.gif"/>
 
-## To run:
+## Usage:
 
 ```console
 $ GOL {optional arguements}
 ```
 
-## Possible Optional Arguements
+### Possible Optional Arguements
 To pass an optional arguement when running GOL-C, simply add the arguement when running the above.
 
 ```console
