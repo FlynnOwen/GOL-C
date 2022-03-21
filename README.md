@@ -1,6 +1,6 @@
 <h1 align="center"> GOL   <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"/></p>
 
-<img align="left" width="450" height="510" src="images/GOLc.gif"/>
+<img align="left" width="450" height="520" src="images/GOLc.gif"/>
 
 ## To install:
 ```console
