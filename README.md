@@ -5,6 +5,7 @@
 ## To install:
 ```console
 $ make
+$ make install
 ```
 
 ## To run:
