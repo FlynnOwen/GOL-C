@@ -1,4 +1,4 @@
-<h1 align"center"> GOL-C </h1>
+<h1 align="center"> GOL-C </h1>
 <p align="center"> Conway's Game of Life terminal application. </p>
 
 <img align="left" width="450" height="510" src="images/GOLc.gif"/>
