@@ -22,7 +22,7 @@ To pass an optional arguement when running GOL-C, simply add the arguement when 
 
 ```console
 -e {Number of evolutions e.g 100} (Number of steps to evolve for (default 100))
--t {Nanoseconds between evolutions e.g 20000} (Number of seconds between each evolution (default 10000))
+-t {Nanoseconds between evolutions e.g 20000} (Number of seconds between each evolution (default 20000))
 -s {Random seed value e.g 100} (The random seed to use to generate the initial cells (default 1))
 -c {ASCII character e.g B} (The ASCII character used to represent a living cell (default O))
 -g (whether to set the initial state as a glider gun)
