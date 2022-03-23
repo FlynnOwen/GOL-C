@@ -9,7 +9,7 @@ $ make
 $ make install
 ```
 
-<img align="left" width="410" height="410" src="images/GOLc.gif"/>
+<img align="left" width="410" height="410" src="images/GOLc.gf"/>
 
 ## Usage:
 
