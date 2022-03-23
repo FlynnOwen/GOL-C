@@ -1,6 +1,7 @@
 <h1 align="center"> GOL   <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"/></p>
 
 <h2 align="center"> Manual install: </h2>
+
 ```console
 $ git clone https://github.com/FlynnOwen/GOL-C.git
 $ cd GOL-C
