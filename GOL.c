@@ -10,7 +10,7 @@ int nCols = 40;
 char board[40][40];
 char blankBoard[40][40];
 int evolutions = 100;
-int timeBetweenEvolutions = 10000;
+int timeBetweenEvolutions = 20000;
 int randomSeed = 50;
 char cellAscii = 'O';
 
