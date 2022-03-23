@@ -10,7 +10,7 @@ int nCols = 40;
 char board[40][40];
 char blankBoard[40][40];
 int evolutions = 100;
-int timeBetweenEvolutions = 0;
+int timeBetweenEvolutions = 10000;
 int randomSeed = 50;
 char cellAscii = 'O';
 
@@ -227,7 +227,7 @@ int main(int argc, char *argv[]) {
     initBoard(boardInitState);
     
     for (e=0; e < evolutions; e++) {
-        sleep(timeBetweenEvolutions);
+        usleep(timeBetweenEvolutions);
         initBoard('b');
         evolveBoard();
         updateOldBoard();
