@@ -180,8 +180,7 @@ void updateOldBoard() {
 }
 
 void printBoardState(evolution) {
-    system("clear");
-
+    printf("\033[H"); // Sets cursor to homestate
     for (i = 0; i < nRows; i++){
         for (j = 0; j < nCols; j++){
             printf("%c ", board[i][j]);
@@ -194,7 +193,9 @@ void printBoardState(evolution) {
 
 int main(int argc, char *argv[]) {
     int e;
-    int opt;
+    int opt; 
+    printf("\033c"); // clears the terminal
+    printf("\033[?25l"); // makes cursor invisible
 
     while((opt = getopt(argc, argv, ":ge:c:t:s:x")) != -1) 
     { 
@@ -233,5 +234,6 @@ int main(int argc, char *argv[]) {
         printBoardState(e);
     }
 
+    printf("\033[?25h"); // makes cursor visible
     return 0;
 }
