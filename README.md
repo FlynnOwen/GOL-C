@@ -36,6 +36,6 @@ It was shown to be Turing Complete (meaning it can simulate any Turing Machine) 
 By regarding Gliders as 'bits' and a collection of patterns (glider guns, glider eaters and more), it's possible to emulate logic gates and memory latches. Try running the application in this repository with the *-g* option to see a glider gun in action!
 
 ## TODO
-- [] Allow user to specify initial state
-- [] Allow user to choose cell colour
-- [] Allow user to specify board size
+- [ ] Allow user to specify initial state
+- [ ] Allow user to choose cell colour
+- [ ] Allow user to specify board size
