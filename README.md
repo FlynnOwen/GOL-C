@@ -39,3 +39,5 @@ By regarding Gliders as 'bits' and a collection of patterns (glider guns, glider
 - [ ] Allow user to specify initial state
 - [ ] Allow user to choose cell colour
 - [ ] Allow user to specify board size
+- [ ] Use half-block characters or unicode braille to improve quality
+- [ ] Improve makefile
